@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenangan 9D</title>
+<link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div class="container">
+        
+        <div id="photo-gallery">
+            <h2>Photo Kenangan 9D</h2>
+            <div class="photo-grid" id="photo-grid">
+                <!-- Photos will be added here dynamically -->
+            </div>
+        </div>
+        
+        <!-- Modal for Image Preview -->
+        <div id="image-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <div class="modal-caption">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <small id="modal-date"></small>
+            </div>
+        </div>
+    </div>
+    
+        <button id="admin-login-button" class="login-link">Admin Login</button>
+        
+        <div id="login-section" style="display: none;">
+            <h2>Admin Login</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <button id="login-btn">Login</button>
+                <button id="cancel-login-btn" class="logout-btn">Cancel</button>
+            </div>
+            <p id="login-error" style="color: #fc8181; margin-top: 10px; display: none;">Invalid username or password.</p>
+        </div>
+        
+        <div id="admin-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>Admin Panel</h2>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+            
+            <div class="form-group">
+                <label for="photo-title">Photo Title:</label>
+                <input type="text" id="photo-title" placeholder="Enter title">
+            </div>
+            <div class="form-group">
+                <label for="photo-description">Description:</label>
+                <textarea id="photo-description" rows="3" placeholder="Enter description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="photo-file">Select Photo:</label>
+                <input type="file" id="photo-file" accept="image/*">
+                <img id="photo-preview" class="photo-preview">
+            </div>
+            <button id="upload-btn">Upload Photo</button>
+            <p id="upload-message" style="margin-top: 10px; display: none;"></p>
+        </div>
+    
+    <script src="main.js">
+    </script>
+</body>
+</html>
